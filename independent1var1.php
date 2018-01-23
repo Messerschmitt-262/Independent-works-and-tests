@@ -8,9 +8,9 @@
 		['id' => 5, 'name' => 'Иван', 'age' => 27, 'salary' => 500],
 		['id' => 6, 'name' => 'Кирилл', 'age' => 28, 'salary' => 1000]
 	];
-	echo '<pre>';
-	var_dump($table);
-	echo '</pre>';
+	// echo '<pre>';
+	// var_dump($table);
+	// echo '</pre>';
 
 ?>
 <!-- <?=$table[0][0]?> -->
@@ -23,7 +23,9 @@
 <body>
 	<table>
 		<tr>
-			<th></th>
+		<?php foreach($table as $item): ?>
+			<th><?=$item['id']?></th>
+		<?php endforeach; ?>
 		</tr>
 		<tr>
 			<td></td>
